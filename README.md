@@ -1,2 +1,2 @@
 # PotLuck
-This branch is for master commits! :)
+This branch is for Aaron-cat commits :)
