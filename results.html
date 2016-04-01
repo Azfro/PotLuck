@@ -2,9 +2,11 @@
 <html lang="en">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.js"></script>
 <head>
     <meta charset="UTF-8">
-    <title>Main</title>
+    <title>Results: Pork</title>
     <link rel="stylesheet" type="text/css" href="home.css">
     <script>
     //scripts here
@@ -12,41 +14,127 @@
 </head>
 <body>
 <!-- Code for Navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><!--<img src="images/PotMerged.svg">-->Potluck</a>
+<div class="navbar-wrapper">
+            <div class="container">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            
+                            <a class="navbar-brand" href="#" style="padding-top: 5px;">
+                                <img alt="Potluck" src="images/PotMerged.svg" width="20%">
+                                    </a>
+                        </div>
+                        
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-static-top" id="bs-example-navbar-collapse-1">
+                            
+                            
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                        </div>
+                                <button type="submit" class="btn btn-default">Go</button>
+                            </form>
+                            
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
         </div>
-      </div>
-    </nav>
-
     <!-- Main Recipe Div -->
-    <div class="container-fluid row">
-    	<!-- Div showing selected Recipe -->
-        <div id="main-recipe-pane" class="col-xs-12 col-md-9 pull-right">
+    <div class="container-fluid">
+    <!-- Div showing selected Recipe -->
+    <hr class="featurette-divider">
+    <div class="row featurette grey">
+    	<!--MAIN RECIPE PANE ====================== -->
+            <div class="col-md-8 ">
+            	<img id="recipe-image" class="featurette-image shadow" src="images/porkbelly.jpg" alt="A viking ate the photo, sorry!">
+                <h1 class="featurette-heading white-text" id="title">Buta no kakuni: Japanese Braised Pork Belly</h1>
+                <div class="row" id="data-div">
+	                <div class="col-md-7" id="ingredients">
+		                <h2>Ingredients:</h2>
+		                <ul>
+		                	<li><p class="lead"><span class="text=muted">500g pork belly</span></p></li>
+		                	<li><p class="lead"><span class="text=muted">1 star anise</span></p></li>
+		                	<li><p class="lead"><span class="text=muted">50ml soy sauce</span></p></li>
+		                	<li><p class="lead"><span class="text=muted">300ml water</span></p></li>
+		                	<li><p class="lead"><span class="text=muted">1 piece ginger, sliced</span></p></li>
+		                </ul>
+	                </div><!-- /.ingredients -->
 
-            <div id="recipe-image-div">
-            	<img id="recipe-image" src="images/r-bg.jpg">
-            	<p> right 1 Test</p>
-        	</div>
+	                <div class="col-md-5 lead" id="recipe-data">
+	                	<p>Serves: 6-10</p>
+	                	<p>Prep time: 10 min</p>
+	                	<p>Cook time: 3 h 10 min</p>
+	                	<p>Total time: 3 h 20 min</p>
+	                </div><!-- /.recipe-data -->
+	            </div><!-- /.data-div -->
 
-            <div id="recipe-method">
-            	<p> right 2 Test</p>
+	            <div class="row white-text" id="method">
+	            	<h1 class=" bold" >Method:</h1>
+	            	<ol type="1" class="lead">
+	            		<li>Cut the pork into cubes about 1 inch / 2cm or so square. If the skin is still on, leave it on. Heat up a large pot with a heavy bottom. Sauté the pork belly cubes, without any added fat (you don't need it...) until browned.</li>
+	            		<hr class="featurette-divider">
+	            		<li>When the meat is browned, scrape it to one side and put the sugar in the fat that's accumulated on the bottom, and stir around until it's a bit caramelized. Stir and toss so the meat gets coated by the sugar.</li>
+	            		<hr class="featurette-divider">
+	            		<li>Add the rest of the ingredients, bring to a simmer and lower the heat. Put a lid on and let it simmer gently for about 3 hours, turning occasionally.</li>
+	            		<hr class="featurette-divider">
+	            		<li>To serve, dredge the pieces carefully out of the very oily cooking liquid, and peel of the thick layer of fat that's on the skin side of the meat. Drizzle a little bit of the cooking liquid over the cubes.</li>
+	            		<hr class="featurette-divider">
+	            	</ol>
+	            </div><!-- /.method -->
+            </div>
+    		<!--RIGHT RECIPE PANE ====================== -->
+            <div class="col-md-4" id="right-recipe-pane"  data-spy="affix" data-offset-top="205">
+            	<h2 class="featurette-heading white-text">Or you could have these other recipes...</h2>
+            	<hr class="featurette-divider">
+
+            	<!--RECIPE OPTION 1 ====================== -->
+            	<div class="row alt-recipe green">
+            		<div class="col-xs-3">
+            			<img class="featurette-image img-responsive shadow" src="http://placehold.it/100x100" alt="Generic placeholder image">
+            		</div>
+            		<div class="col-xs-9">
+            			<p class="lead bold">Yummy other recipe!</p>
+            			<p>A different but equally yummy recipe, I promise! It still (obvs) includes pork belly, since it is the food of Gods....</p>
+            		</div>
+            	</div>
+            	
+            	<!--RECIPE OPTION 2 ====================== -->
+            	<div class="row alt-recipe red">
+            		<div class="col-xs-3">
+            			<img class="featurette-image img-responsive shadow" src="http://placehold.it/100x100" alt="Generic placeholder image">
+            		</div>
+            		<div class="col-xs-9">
+            			<p class="lead bold">Not so yummy other recipe :(</p>
+            			<p>This recipe only serves one, and has a lot less meat, but if that floats your boat...</p>
+            		</div>
+            	</div>
+
+                <!--RECIPE OPTION 3 ====================== -->
+            	<div class="row alt-recipe purple">
+            		<div class="col-xs-3">
+            			<img class="featurette-image img-responsive shadow" src="http://placehold.it/100x100" alt="Generic placeholder image">
+            		</div>
+            		<div class="col-xs-9">
+            			<p class="lead bold">That weird recipe your grandma gave you!</p>
+            			<p>Perhaps you're feeling brave, or think it's respectful to serve such a dish; or maybe you're drunk. You're probably drunk...</p>
+            		</div>
+            	</div>
+
             </div>
 
-            <div id="recipe-ingred">
-            	<p> right 3 Test</p>
-            </div>
             
         </div>
-
-        <!-- Div showing alternative recipes -->
-        <div id="left-recipe-pane" class="col-xs-12 col-md-3 pull-left">
-        	<p> left Test</p>
-        </div>
-
-        
+    	
     </div>
+    <!-- FOOTER
+         ================================================== -->
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p><a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; Potluck app © </p>
+        </footer>
     
 </body>
 </html>
