@@ -1,0 +1,14 @@
+.nav-logo{
+	display: inline-block;
+	max-width: 50%;
+	height: auto; 
+}
+
+.navbar-brand{
+
+}
+
+#recipe-image{
+	max-width:90%;
+	height: auto; 
+}
